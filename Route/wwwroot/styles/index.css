@@ -1,0 +1,93 @@
+@import "./navbar.css";
+@import "./home.css";
+@import "./productos.css";
+@import "./contacto.css";
+@import "./cart.css";
+@import "./alertCard.css";
+@import "./form.css";
+@import "./payment.css";
+
+/* @link https://utopia.fyi */
+:root {
+  --bg-color: #f9f8f6;
+  --font-m-color: #192138;
+  --font-s-color: #f9f8f6;
+  --item-bg: #e5e5e5;
+  --dimention: 30px;
+  /* variables */
+  --margin-h: clamp(1.2rem, calc(0.5rem + 5vw), 3.66rem);
+  --font-title: clamp(3.27rem, calc(2.75rem + 2.56vw), 4.58rem);
+  --font-p: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
+  --font-product: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
+  --gap-h: 5vw;
+}
+@media (max-width: 900px) {
+  :root {
+    --font-title: clamp(2.2rem, calc(1rem + 5vw), 3.66rem);
+    --font-p: clamp(1.09rem, calc(1.05rem + 0.21vw), 1.2rem);
+  }
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-m-color);
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+/* - */
+.selected {
+  color: var(--font-m-color);
+}
+.selected::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--font-m-color);
+  position: absolute;
+  top: 2px;
+  left: calc(50% - 4px);
+  border-radius: 50%;
+}
+.weight-medium {
+  font-weight: 400;
+}
+
+.button-class {
+  cursor: pointer;
+  font-size: var(--font-p);
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background-color: var(--font-m-color);
+  color: var(--font-s-color);
+}
+
+.loader{
+  width: fit-content;
+  margin: 100px auto;
+}
+.loader > img{
+  width: 100px;
+}
+/* @media (max-width: 1137px) {
+} */

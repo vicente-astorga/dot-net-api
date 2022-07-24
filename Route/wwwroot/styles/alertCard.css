@@ -1,0 +1,27 @@
+
+
+
+.alert__card{
+    position: fixed;
+    z-index: 9;
+    top: 50px;
+    left: 0;
+    right: 0;   
+    width: 250px;
+    margin: 0 auto;
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--item-bg);
+    color: var(--font-m-color);
+    animation: 2s fade;
+    text-align: center;
+    opacity: 0;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+  }

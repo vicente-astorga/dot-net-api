@@ -1,0 +1,40 @@
+
+.payment{
+    width: 100%;
+    height: fit-content;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+.payment > h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.payment__resume{
+    border: 2px solid var(--bg-color);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+
+}
+.payment__resume > hr{
+    border: 0; 
+    border-top: 1px solid var(--bg-color);
+}
+.payment__notice{
+    border: 2px solid var(--bg-color);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+}
+.payment__notice > img{
+    margin-bottom: 1rem;
+}
+
+/* recibo */
+.recibo__container{
+    font-weight: 600;
+    padding: 1rem;
+}
+.recibo__container > div > span {
+    font-weight: 300;
+}

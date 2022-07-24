@@ -1,0 +1,186 @@
+
+  body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .carrito { 
+    width: calc(100% - 2 * var(--margin-h));
+    height: fit-content;
+    margin: 0 auto;
+    padding-bottom: var(--margin-h);
+  
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title title"
+      "container resume";
+    gap: 1rem;
+  }
+  /* mark component */
+
+  .carrito__title{
+    grid-area: title;
+  }
+  .carrito__title > h1 {
+    font-size: calc(var(--font-title) * 0.75);
+    margin: 0;
+    text-align: center;
+  }
+  
+  
+  /* .carrito__step {
+    background-color: lightgray;
+  
+    grid-area: step;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 2rem;
+    padding-top: 5rem;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap-h);
+  }
+  
+  .step-mark {
+    position: relative;
+  }
+  .step-mark:not(:last-child):after {
+    position: absolute;
+    content: "";
+    width: var(--gap-h);
+    border: thin solid black;
+    bottom: calc(150% + 1rem);
+    left: 100%;
+  }
+  .step-number {
+    font-weight: bold;
+    position: absolute;
+    bottom: 150%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 2rem;
+    height: 2rem;
+    border: medium solid black;
+    border-radius: 50%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-name {
+    font-weight: bold;
+    padding: 0 1rem;
+  } */
+  
+  /* container component */
+  .carrito__container {
+    grid-area: container;
+    width: 100%;
+    height: fit-content;
+    background-color:  var(--item-bg);
+    border-radius: 1rem;
+  }
+  .carrito__container__item {
+    margin: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+  
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    gap: calc(var(--font-p) * .5);
+  }
+  .item-image {
+    width: calc(var(--font-p) * 3.5);
+    height: calc(var(--font-p) * 3.5);
+    /* flex-basis:  100px; */
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+  .item-name{
+    font-size: calc(var(--font-p) * 1);
+  }
+  .item-price{
+    margin-left: auto;
+    font-size: var(--font-p);
+    font-weight: 800;
+  }
+  .item-amount{
+    font-size: var(--font-p);
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .item-delete > img{
+    width: 25px;
+  }
+  /* dynamic alert */
+  .item-alert{
+      font-size: calc(var(--font-title) * .5);
+      margin: calc(var(--font-title) * .5) 0;
+      text-align: center;
+  }
+  
+  /* resume component */
+  .carrito__resume {
+    background-color:  var(--item-bg);
+    border-radius: 1rem;
+  
+    height: fit-content;
+    grid-area: resume;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding:  1rem;
+  }
+  .resume-title{
+    margin: 0;
+    font-size: calc(var(--font-p) * 1.5);
+    font-weight: 800;
+  }
+  .resume-price{
+    margin: 0;
+    text-align: center;
+    font-size: calc(var(--font-p) * 1.5);
+    font-weight: 300;
+  }
+  .resume-shipping{
+    margin: 0;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  /* .resume-button {
+    padding: 1rem 2rem;
+    background-color: gray;
+    border-radius: 1rem;
+    color: black;
+    text-decoration: none;
+  } */
+  
+  @media (max-width: 900px) {
+    .carrito {
+      width: calc(100% - 2 * calc(var(--margin-h) * 0.5));
+      height: fit-content;
+      margin: 0 auto;
+  
+      display: grid;
+      grid-template-columns: 1fr !important;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "title"
+        "container"
+        "resume" !important;
+    }
+  }
+  

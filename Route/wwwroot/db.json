@@ -1,0 +1,121 @@
+{
+  "producto": [
+    {
+      "nombre": "Tenda WiFi N300 F3",
+      "descripcion": "Router inalámbrico de 300Mbps F3 está especialmente diseñado para optimizar su experiencia de red en el hogar.   Fácil configuración  Interfaz de fácil configuración que hace que se pueda disfrutar de una experiencia WiFi fluido sin esfuerzo. El F3 es muy fácil e intuitivo de configurar sin operaciones que consumen mucho tiempo. ",
+      "precio": "14990",
+      "stock": "5",
+      "estado": "available",
+      "id": 1
+    },
+    {
+      "nombre": "Simmens Red",
+      "descripcion": "Portátil o adaptador USB BAM (Banda Ancha Móvil), el TL-MR3020 permite al usuario compartir de manera sencilla una conexión móvil 3G/34G con familia y amigos en el tren, acampando, en el hotel, y casi en cualquier lugar por su cobertura 3G/4G. Al conectar un modem USB 3G al router, un hotspot 3G con Wi-Fi se establece de manera inmediata.",
+      "precio": "16990",
+      "stock": "2",
+      "estado": "available",
+      "id": 2
+    },
+    {
+      "nombre": "Samsung 990GT",
+      "descripcion": "Comparte la libertad del 3G/4G! Al TL-MR3020 permite al usuario compartir de manera sencilla una conexión móvil 3G/34G con familia y amigos en el tren, acampando, en el hotel, y casi en cualquier lugar por su cobertura 3G/4G. Al conectar un modem USB 3G al router, un hotspot 3G con Wi-Fi se establece de manera inmediata.",
+      "precio": "10000",
+      "stock": "10",
+      "estado": "available",
+      "id": 3
+    },
+    {
+      "nombre": "Huawei G1",
+      "descripcion": "Soporta el estándar 802.11ac - la próxima generación Wi-Fi. Conexiones simultáneas de 2.4GHz y 5GHz a 300Mbps y 433Mbps para un total de 733Mbps de ancho de banda disponible. Señal omnidireccional estable y cobertura inalámbrica superior.",
+      "precio": "5000",
+      "stock": "70",
+      "estado": "available",
+      "id": 4
+    },
+    {
+      "nombre": "Rompemuros N300",
+      "descripcion": "El Router Inalámbrico de Alta Potencia N300Mbps TL-WR841HP es una solución inalámbrica poderosa muy adecuada para el hogar o la oficina. Con velocidades inalámbricas de hasta 300 Mbps, el TL-WR841HP es ideal para la transmisión de video de alta definición, llamadas VoIP y juegos en línea. Además cuenta con  2 antenas  de alta ganancia de 9dBi y una alta potencia de transmisión por lo que el dispositivo aumenta en gran medida el rendimiento Wi-Fi.",
+      "precio": "21990",
+      "stock": "30",
+      "estado": "available",
+      "id": 5
+    },
+    {
+      "nombre": "Huawei Try",
+      "descripcion": "asdadasdasd",
+      "precio": "123",
+      "stock": "123",
+      "estado": "available",
+      "id": 6
+    }
+  ],
+  "vendedor": [
+    {
+      "idVendedor": 1,
+      "nombreVendedor": "Claudio Gomez",
+      "password": "123456",
+      "emailVendedor": "cgomez@route.cl",
+      "loginStatus": false
+    },
+    {
+      "idVendedor": 2,
+      "nombreVendedor": "Camila Rosas",
+      "password": "123456",
+      "emailVendedor": "crosas@route.cl",
+      "loginStatus": false
+    }
+  ],
+  "cliente": [
+    {
+      "id": 1,
+      "nombreCliente": "Juan",
+      "apellidoCliente": "Perez",
+      "emailCliente": "jperez@hola.cl",
+      "telefonoCliente": 123456789
+    }
+  ],
+  "carrito": [
+    {
+      "id": 1,
+      "precioSubtotal": 50000,
+      "idCliente": 1
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "cantidadItem": 4,
+      "precioItem": 10000,
+      "precioTotalItem": 40000,
+      "idProducto": 3,
+      "idCarrito": 1
+    },
+    {
+      "id": 1,
+      "cantidadItem": 2,
+      "precioItem": 5000,
+      "precioTotalItem": 10000,
+      "idProducto": 4,
+      "idCarrito": 1
+    }
+  ],
+  "envio": [
+    {
+      "id": 1,
+      "precioEnvio": 3000,
+      "fechaEnvio": "01-05-2022",
+      "direccionEnvio": "Calle Falsa #123, Rancagua",
+      "regionEnvio": "LI"
+    }
+  ],
+  "orden": [
+    {
+      "id": 1,
+      "fechaCreacion": "14-04-2022",
+      "estado": "confirmada",
+      "precioEnvio": 53000,
+      "idCarrito": 1,
+      "idEnvio": 1
+    }
+  ]
+}

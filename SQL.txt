@@ -1,0 +1,88 @@
+create database BD_ROUTE;
+use BD_ROUTE;
+
+CREATE TABLE PRODUCTO (  
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,  
+  nombre varchar(50) not null,  
+  descripcion varchar(500),
+  stock int not null,  
+  precio int not null,  
+  estado varchar(30) not null
+);  
+
+CREATE TABLE ENVIO (  
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,  
+  precioEnvio int not null,  
+  fechaEnvio DATE not null,  
+  direccionEnvio varchar(100) not null,  
+  regionEnvio varchar(50) not null,  
+);  
+
+
+CREATE TABLE CLIENTE ( 
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,  
+  nombreCliente varchar(50) not null,  
+  apellidoCliente varchar(50) not null,  
+  emailCliente varchar(50) not null,  
+  telefonoCliente int not null,  
+); 
+
+  
+CREATE TABLE VENDEDOR ( 
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,  
+  nombreVendedor varchar(50) not null,  
+  password varchar(50) not null,  
+  emailVendedor varchar(50) not null,  
+  loginStatus int not null,  
+); 
+  
+
+CREATE TABLE CARRITO (  
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,  
+  precioSubtotal INt not null,  
+  idCliente int NOT null,
+  FOREIGN KEY (idCliente) REFERENCES CLIENTE(id) 
+);  
+  
+
+CREATE TABLE ITEMS (  
+
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,  
+  cantidadItem int not null,  
+  precioItem int NOT null, 
+  precioTotalItem int NOT null, 
+  idProducto int NOT null, 
+  idCarrito int NOT null, 
+  FOREIGN KEY (idProducto) REFERENCES PRODUCTO(id), 
+  FOREIGN KEY (idCarrito) REFERENCES CARRITO(id)  
+);  
+
+
+CREATE TABLE ORDEN (  
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,  
+  fechaCreacion DATE not null,  
+  estado varchar(30) not null,  
+  precioTotal int not null,  
+  idCarrito int not null,  
+  idEnvio int not null,    
+  FOREIGN KEY (idCarrito) REFERENCES CARRITO(id), 
+  FOREIGN KEY (idEnvio) REFERENCES ENVIO(id)  
+);  
+
+insert into PRODUCTO values ('Tenda WiFi N300 F3','Router inalámbrico de 300Mbps F3 está especialmente diseñado para optimizar su experiencia de red en el hogar. Fácil configuración Interfaz de fácil configuración que hace que se pueda disfrutar de una experiencia WiFi fluido sin esfuerzo.',10,14990,'available');
+insert into PRODUCTO values ('Samsung 990GT','Comparte la libertad del 3G/4G! Al TL-MR3020 permite al usuario compartir de manera sencilla una conexión móvil 3G/34G con familia y amigos en el tren, acampando, en el hotel, y casi en cualquier lugar por su cobertura 3G/4G.',15,12000,'available');
+insert into PRODUCTO values ('Rompemuros N300','El Router Inalámbrico de Alta Potencia N300Mbps TL-WR841HP es una solución inalámbrica poderosa muy adecuada para el hogar o la oficina. Con velocidades inalámbricas de hasta 300 Mbps, el TL-WR841HP es ideal para la transmisión de video de alta definición, llamadas VoIP y juegos en línea.',20,21990,'available');
+insert into PRODUCTO values ('Huawei G1	','Soporta el estándar 802.11ac - la próxima generación Wi-Fi. Conexiones simultáneas de 2.4GHz y 5GHz a 300Mbps y 433Mbps para un total de 733Mbps de ancho de banda disponible.',5,30000,'available');
+
+insert into VENDEDOR values ('Axel Soza','123456','asoza@gmail.com',1);
+insert into VENDEDOR values ('Claudia Rios','123456','crios@gmail.com',1);
+
+/*
+select * from ITEMS;
+
+delete from ORDEN;
+delete from ENVIO;
+delete from ITEMS;
+delete from CARRITO;
+delete from CLIENTE;
+*/

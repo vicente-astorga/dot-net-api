@@ -1,0 +1,217 @@
+
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  .home {
+    display: grid;
+    margin: 0 var(--margin-h);
+    height: 75vh;
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title image info"
+      "button image info";
+  }
+  
+  /* TITLE SECTION */
+  .home__title {
+    color: var(--font-m-color);
+    grid-area: title;
+    width: 100%;
+    height: 100%;
+  }
+  .home__title > .home__title__main {
+    width: 100%;
+    height: 100%;
+  }
+  .home__title__main > h1 {
+    width: 170%;
+    font-size: var(--font-title);
+    /* border: thin solid red; */
+  }
+  
+  .home__title__main > p {
+    font-size: var(--font-p);
+    width: 90%;
+    line-height: 2rem;
+  }
+  .line-over {
+    position: relative;
+  }
+  .line-over > img {
+    position: absolute;
+    width: 100%;
+    top: -1rem;
+    left: 0;
+  }
+  /* END */
+  
+  /* PICTURE SECTION */
+  .home__picture {
+    color: var(--font-m-color);
+    grid-area: image;
+    z-index: -1;
+  
+    width: 100%;
+    height: 100%;
+  }
+  .home__picture > .bg-image {
+    height: 100%;
+    width: 100%;
+    background: url(../assets/grad.png) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 1rem;
+  
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .bg-image > .inside-image {
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    width: 70%;
+  }
+  /* END */
+  
+  /* INFO SECTION */
+  .home__info {
+    grid-area: info;
+    color: var(--font-m-color);
+  
+    width: 100%;
+    height: 100%;
+  }
+  .home__info__items {
+    width: 100%;
+    height: 100%;
+    /* border: thin solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .info__item {
+    margin: 0 30%;
+  }
+  .info__item > div {
+    color: var(--font-m-color);
+    font-weight: bold;
+    font-size: calc(var(--font-p) * 2);
+  }
+  .info__item > span {
+    color: #626a7e;
+    font-weight: 600;
+  }
+  /* END */
+  
+  /* BUTTON SECTION */
+  .home__button {
+    grid-area: button;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  /* END */
+  
+  @media (max-width: 1137px) {
+    .home {
+      display: grid;
+      margin: 0 var(--margin-h);
+      height: 75vh;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "title image "
+        "button info";
+    }
+  
+    /* INFO SECTION */
+    .home__info__items {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .info__item {
+      margin: 0;
+    }
+    /* END */
+  
+    /* PICTURE SECTION */
+    .bg-image > .inside-image {
+      padding-right: 1rem;
+      padding-bottom: 2rem;
+      width: 60%;
+    }
+    /* END */
+  }
+  
+  @media (max-width: 900px) {
+      
+    .home {
+      display: grid;
+      margin: 0 var(--margin-h);
+      height: max-content;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "title"
+        "image"
+        "info"
+        "button";
+      gap: 2rem;
+    }
+  
+    /* TITLE SECTION */
+    .home__title__main > h1 {
+      width: 100%;
+      font-size: var(--font-title);
+      margin-bottom: 0;
+      /* border: thin solid red; */
+    }
+    .home__title__main > p {
+      display: none;
+    }
+    .line-over {
+      position: relative;
+    }
+    .line-over > img {
+      position: absolute;
+      width: 100%;
+      top: -1rem;
+      left: 0;
+    }
+    /* END */
+  
+    /* INFO SECTION */
+    .home__info {
+      height: 100%;
+    }
+    .home__info__items {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .info__item {
+      margin: 0;
+    }
+    /* END */
+  
+    /* PICTURE SECTION */
+    .bg-image > .inside-image {
+      padding-right: 1rem;
+      padding-bottom: 0rem;
+      width: 50%;
+    }
+    /* END */
+  
+    /* BUTTON SECTION */
+    .home__button {
+      justify-content: center;
+    }
+    /* END */
+  }
+  

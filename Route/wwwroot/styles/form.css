@@ -1,0 +1,143 @@
+.form {
+  width: 100%;
+  height: fit-content;
+  color: var(--font-m-color);
+  padding: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title"
+    "email email"
+    "title2 title2"
+    "auto1 auto2"
+    "dir dir"
+    "auto3 auto4"
+    "auto5 auto6"
+    "button button"
+    ;
+  gap: 1rem;
+}
+
+.form__container {
+  width: 100%;
+  height: fit-content;
+}
+.form__container:nth-child(1) {
+  grid-area: title;
+}
+.form__container:nth-child(2) {
+  grid-area: email;
+}
+.form__container:nth-child(3) {
+  grid-area: title2;
+}
+.form__container:nth-child(4) {
+  grid-area: auto1;
+}
+.form__container:nth-child(5) {
+  grid-area: auto2;
+}
+.form__container:nth-child(6) {
+  grid-area: dir;
+}
+.form__container:nth-child(7) {
+  grid-area: auto3;
+}
+.form__container:nth-child(8) {
+  grid-area: auto4;
+}
+.form__container:nth-child(9) {
+  grid-area: auto5;
+}
+.form__container:nth-child(10) {
+  grid-area: auto6;
+}
+.form__container:nth-child(11) {
+  grid-area: button;
+}
+
+
+/* sub titles */
+.form h3 {
+  display: block;
+  align-self: flex-start;
+  margin: 0;
+}
+/*  * * * * * *  */
+
+/* inputs */
+.form input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.35rem;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: ease 0.3s;
+  outline: none;
+  text-align: start;
+  font-size: calc(var(--font-p) * 0.7);
+  font-weight: 400;
+}
+.form input:focus {
+  border: 1px solid var(--font-m-color);
+}
+.form input::placeholder {
+  color: #ccc;
+  text-align: start;
+  font-size: calc(var(--font-p) * 0.7);
+  font-weight: 400;
+}
+
+#form-button {
+  cursor: pointer;
+  font-size: var(--font-p);
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background-color: var(--font-m-color);
+  color: var(--font-s-color);
+  margin: auto;
+}
+/*  * * * * * *  */
+
+/* select */
+.form select {
+  width: 100%;
+  padding: 0.7rem 0.35rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+  text-align: start;
+  font-size: calc(var(--font-p) * 0.7);
+  font-weight: 400;
+}
+.form select:focus {
+  border: 1px solid var(--font-m-color);
+  outline: none;
+}
+/*  * * * * * *  */
+
+/* autocomplete background color */
+input:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #555555 !important;
+}
+
+@media (max-width: 900px) {
+  .form {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "title"
+    "email"
+    "title2"
+    "auto"
+    "dir"
+    ;
+  }
+}
