@@ -4,7 +4,7 @@
 
 The backend works with a REST API based on the .NET CORE 5 framework (for requirements needs). The database was created in SQL Server Management Studio (18) for full compatibility.
 
-The frontend is a simple website that allows users to simulate purchases (bypassing the payment process). The routing of **the products section** works under a HashRouter.js that generates a page with its respective description for each product when it is clicked. Additionally, the section includes validations for its correct operation (path name for each product, access via URL, stock limit and more).
+The frontend is a simple website that allows users to simulate purchases (bypassing the payment process). The routing of **the products section** works under a HashRouter.js that generates a page with its respective description for each product when it is clicked. The section includes validations for its correct operation (path name for each product, access via URL, stock limit and more). In this way, the operation of the website is resolved by making a single fetch request with all the products available when loading the products section.
 
 Additionally, the website contains an administration section (basic CRUD), where the operator can modify the products. this section is only accessible via URL (/admin.html) and is protected with a Log In that works with the credentials of each operator.
 
